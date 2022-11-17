@@ -198,7 +198,8 @@ body {
 }
 
 .cursor.nav-active {
-  background: rgb(16, 218, 201);
+  background: rgb(121, 121, 121);
+  opacity: 75%;
   transform: scale(3);
 }
 

@@ -24,13 +24,13 @@ function animateSlides(){
         //create scene
         slideScene = new ScrollMagic.Scene({
             triggerElement: slide,
-            triggerhook: 0.25,
+            triggerHook: 0.25,
             reverse: false
         })
             .setTween(slideTl)
             .addIndicators({
-                colorstart: "white",
-                colortrigger: "white",
+                colorStart: "white",
+                colorTrigger: "white",
                 name: "slide"
             })
             .addTo(controller);
@@ -44,11 +44,11 @@ function animateSlides(){
         pageScene = new ScrollMagic.Scene({
             triggerElement: slide,
             duration: "100%",
-            triggerhook: 0
+            triggerHook: 0
         })
             .addIndicators({
-                colorstart: "white",
-                colortrigger: "white",
+                colorStart: "white",
+                colorTrigger: "white",
                 name: "slide",
                 indent: 200
             })
@@ -73,18 +73,18 @@ function activeCursor(e) {
     } else {
         mouse.classList.remove("nav-active");
     }
-    if (item.classlist.contains("eplore")){
-        mouse.classlist.add("explore-active");
+    if (item.classList.contains("explore")){
+        mouse.classList.add("explore-active");
         gsap.to(".title-swipe", 1, { y: "0%" });
-        mouseTxt.innertext = "tap";
+        mouseTxt.innerText = "tap";
     } else{
-        mouse.classlist.remove("explore-active");
-        mouseTxt.innertext = "";
+        mouse.classList.remove("explore-active");
+        mouseTxt.innerText = "";
         gsap.to(".title-swipe", 1, { y: "100%" });
     }
 }
 function navtoggle(e){
-    if (!e.target.classlist.contains('active')){
+    if (!e.target.classList.contains('active')){
     e.target.classList.add('active');
     gsap.to("line1", 0.5, { rotate: "45", y: 5, background: "black" });
     gsap.to("line2", 0.5, { rotate: "-45", y: 5, background: "black" });
