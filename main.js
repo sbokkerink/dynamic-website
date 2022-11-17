@@ -15,7 +15,7 @@ function animateSlides(){
         const revealText = slide.querySelector('.reveal-text');
         //GSAP
         const slideTl = gsap.timeline({
-            defaults: { duration: 1, ease: "power2.inOut" }
+            defaults: { duration: 1.5, ease: "power2.inOut" }
         });
         slideTl.fromTo(revealImg, { x: "0%" }, { x: "100%" });
         slideTl.fromTo(img, { scale: 2 }, { scale: 1 }, "-=1");
@@ -83,7 +83,7 @@ function activeCursor(e) {
         gsap.to(".title-swipe", 1, { y: "100%" });
     }
 }
-function navtoggle(e){
+function navToggle(e){
     if (!e.target.classList.contains('active')){
     e.target.classList.add('active');
     gsap.to("line1", 0.5, { rotate: "45", y: 5, background: "black" });
@@ -101,8 +101,7 @@ function navtoggle(e){
     }
 }
 
-//eventlister
-burger.addEventListener("click", navtoggle);
+burger.addEventListener("click", navToggle);
 window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", activeCursor);
 
