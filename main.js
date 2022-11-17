@@ -4,7 +4,7 @@ let pageScene;
 
 function animateSlides(){
     //init controller
-    controller = new ScrollMagic.controller();
+    controller = new ScrollMagic.Controller();
     //select some things
     const sliders = document.querySelectorAll('.slide');
     const nav = document.querySelector('.nav-header');
