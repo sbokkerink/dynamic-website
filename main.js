@@ -2,6 +2,8 @@ let controller;
 let slideScene;
 let pageScene;
 
+
+
 function animateSlides(){
     //init controller
     controller = new ScrollMagic.Controller();
