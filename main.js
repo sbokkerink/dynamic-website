@@ -11,7 +11,7 @@ function animateSlides(){
     const sliders = document.querySelectorAll('.slide');
     const nav = document.querySelector('.nav-header');
     //loop over each slide
-    sliders.forEach(slide =>{
+    sliders.forEach((slide, index, slides) =>{
         const revealImg = slide.querySelector('.reveal-img');
         const img = slide.querySelector('img');
         const revealText = slide.querySelector('.reveal-text');
@@ -108,3 +108,4 @@ window.addEventListener("mousemove", cursor);
 window.addEventListener("mouseover", activeCursor);
 
 animateSlides();
+
