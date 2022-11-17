@@ -44,6 +44,7 @@ body{
   width: 80%;
   margin: auto;
   padding: 2rem 0rem;
+  z-index: 2;
 }
 
 .line1,
@@ -233,6 +234,10 @@ flex-basis: 30rem;
 }
 .t-swipe3{
   background: rgb(241, 216, 147);
+}
+
+body.hide{
+  overflow: hidden;
 }
 
 
