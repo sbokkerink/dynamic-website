@@ -103,12 +103,14 @@ function navToggle(e){
     }
 }
 
+const logo  = document.querySelector('#logo');
 barba.init({
     views: [
         {
             namespace: "home",
             beforeEnter(){
                 animateSlides();
+                logo.href = './index.html';
             },
             beforeLeave(){
                 slideScene.destroy();
@@ -117,21 +119,31 @@ barba.init({
             }
         },
         {
-            namespace: "fashion"
+            namespace: "fashion",
+            beforeEnter() {
+                logo.href = '../index.html';
+            }
         }
     ],
     transitions: [
         {
-            leave({current,next}){
+            leave({ current, next }) {
                 let done = this.async();
-                //an animation
-                const tl = gsap.timeline({defaults: {ease:'power2.inOut'}});
-                tl.fromTo(current.container,1,{opacity:1}, {opacity: 0, oncomplete: done });
+                //An Animation
+                const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+                tl.fromTo(current.container, 1, { opacity: 1 }, { opacity: 0 });
+                tl.fromTo(
+                    ".swipe",
+                    0.75,
+                    { x: "-100%" },
+                    { x: "0%", onComplete: done },
+                    "-=0.5"
+                );
             },
             enter({current,next}){
                 let done = this.async();
                 const tl = gsap.timeline({defaults: {ease:'power2.inOut'}});
-                tl.fromTo(next.container,1,{ opacity: 0 }, {opacity: 1, oncomplete: done });
+                tl.fromTo(next.container,1,{ opacity: 0 }, {opacity: 1});
             }
         }
     ]
