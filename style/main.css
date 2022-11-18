@@ -242,4 +242,24 @@ body.hide {
   overflow: hidden;
 }
 
+.fashion1,
+.fashion2,
+.fashion3 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.fashion-img {
+  height: 80vh;
+  flex-basis: 30rem;
+}
+
 /*# sourceMappingURL=main.css.map */
