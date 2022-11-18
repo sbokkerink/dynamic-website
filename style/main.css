@@ -89,15 +89,15 @@ body {
 }
 
 .lake-span {
-  color: rgb(16, 218, 201);
+  color: rgb(255, 139, 93);
 }
 
 .lights-span {
-  color: rgb(10, 57, 12);
+  color: rgb(167, 110, 231);
 }
 
 .paris-span {
-  color: rgb(241, 216, 147);
+  color: rgb(86, 124, 228);
 }
 
 .hero-disc h2 {
@@ -227,15 +227,15 @@ body {
 }
 
 .t-swipe1 {
-  background: rgb(16, 218, 201);
+  color: rgb(255, 139, 93);
 }
 
 .t-swipe2 {
-  background: rgb(10, 57, 12);
+  color: rgb(167, 110, 231);
 }
 
 .t-swipe3 {
-  background: rgb(241, 216, 147);
+  color: rgb(86, 124, 228);
 }
 
 body.hide {
@@ -258,8 +258,52 @@ body.hide {
 }
 
 .fashion-img {
-  height: 80vh;
-  flex-basis: 30rem;
+  height: 60vh;
+  flex-basis: 50rem;
+}
+
+.fashion-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+}
+
+.fashion-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.fashion-text h1 {
+  font-size: 6rem;
+  padding: 5rem 0rem;
+}
+
+.fashion1 h1 {
+  color: rgb(255, 139, 93);
+}
+
+.fashion2 h1 {
+  color: rgb(167, 110, 231);
+}
+
+.fashion3 h1 {
+  color: rgb(86, 124, 228);
+}
+
+.fashion-text p {
+  font-size: 2rem;
+  padding: 2rem 2rem 0rem 0rem;
+  margin-bottom: 10rem;
+}
+
+.fashion-nr {
+  font-size: 15rem;
+  position: absolute;
+  left: 49%;
+  bottom: 10%;
+  color: white;
+  opacity: 0.4;
 }
 
 /*# sourceMappingURL=main.css.map */
